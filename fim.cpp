@@ -614,7 +614,7 @@ void fim::run_fim()
         }
 
         make_metadata_log(monitor_path);
-        f_monitor[thread_count] = thread(file_integrity_monitoring, monitor_path, monitor_mask, excluded_list_exist);
+        f_monitor[thread_count] = std::thread(file_integrity_monitoring, monitor_path, monitor_mask, excluded_list_exist);
         thread_count++;
     }
 
