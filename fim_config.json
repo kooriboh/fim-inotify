@@ -1,0 +1,89 @@
+{
+    "syscall": "inotify",
+    "monitor-item":
+    [
+        {
+            "path": "/",
+            "type": "dir",
+            "mask": "IN_MODIFY | IN_ATTRIB | IN_MOVED_FROM | IN_MOVED_TO | IN_CREATE | IN_DELETE | IN_DELETE_SELF | IN_MOVE_SELF"
+        },
+        {
+            "path": "/bin",
+            "type": "dir",
+            "mask": "IN_MODIFY | IN_ATTRIB | IN_MOVED_FROM | IN_MOVED_TO | IN_CREATE | IN_DELETE | IN_DELETE_SELF | IN_MOVE_SELF"
+        },
+        {
+            "path": "/boot",
+            "type": "dir",
+            "mask": "IN_MODIFY | IN_ATTRIB | IN_MOVED_FROM | IN_MOVED_TO | IN_CREATE | IN_DELETE | IN_DELETE_SELF | IN_MOVE_SELF"
+        },
+        {
+            "path": "/dev",
+            "type": "dir",
+            "mask": "IN_MODIFY | IN_ATTRIB | IN_MOVED_FROM | IN_MOVED_TO | IN_CREATE | IN_DELETE | IN_DELETE_SELF | IN_MOVE_SELF"
+        },
+        {
+            "path": "/etc",
+            "type": "dir",
+            "mask": "IN_MODIFY | IN_ATTRIB | IN_MOVED_FROM | IN_MOVED_TO | IN_CREATE | IN_DELETE | IN_DELETE_SELF | IN_MOVE_SELF"
+        },
+        {
+            "path": "/lib",
+            "type": "dir",
+            "mask": "IN_MODIFY | IN_ATTRIB | IN_MOVED_FROM | IN_MOVED_TO | IN_CREATE | IN_DELETE | IN_DELETE_SELF | IN_MOVE_SELF"
+        },
+        {
+            "path": "/lib64",
+            "type": "dir",
+            "mask": "IN_MODIFY | IN_ATTRIB | IN_MOVED_FROM | IN_MOVED_TO | IN_CREATE | IN_DELETE | IN_DELETE_SELF | IN_MOVE_SELF"
+        },
+        {
+            "path": "/root",
+            "type": "dir",
+            "mask": "IN_MODIFY | IN_ATTRIB | IN_MOVED_FROM | IN_MOVED_TO | IN_CREATE | IN_DELETE | IN_DELETE_SELF | IN_MOVE_SELF"
+        },
+        {
+            "path": "/sbin",
+            "type": "dir",
+            "mask": "IN_MODIFY | IN_ATTRIB | IN_MOVED_FROM | IN_MOVED_TO | IN_CREATE | IN_DELETE | IN_DELETE_SELF | IN_MOVE_SELF"
+        },
+        {
+            "path": "/usr/lib",
+            "type": "dir",
+            "mask": "IN_MODIFY | IN_ATTRIB | IN_MOVED_FROM | IN_MOVED_TO | IN_CREATE | IN_DELETE | IN_DELETE_SELF | IN_MOVE_SELF"
+        },
+        {
+            "path": "/usr/local/bin",
+            "type": "dir",
+            "mask": "IN_MODIFY | IN_ATTRIB | IN_MOVED_FROM | IN_MOVED_TO | IN_CREATE | IN_DELETE | IN_DELETE_SELF | IN_MOVE_SELF"
+        },
+        {
+            "path": "/usr/local/lib",
+            "type": "dir",
+            "mask": "IN_MODIFY | IN_ATTRIB | IN_MOVED_FROM | IN_MOVED_TO | IN_CREATE | IN_DELETE | IN_DELETE_SELF | IN_MOVE_SELF"
+        },
+        {
+            "path": "/usr/local/sbin",
+            "type": "dir",
+            "mask": "IN_MODIFY | IN_ATTRIB | IN_MOVED_FROM | IN_MOVED_TO | IN_CREATE | IN_DELETE | IN_DELETE_SELF | IN_MOVE_SELF"
+        },
+        {
+            "path": "/var/log",
+            "type": "dir",
+            "mask": "IN_MODIFY | IN_ATTRIB | IN_MOVED_FROM | IN_MOVED_TO | IN_CREATE | IN_DELETE | IN_DELETE_SELF | IN_MOVE_SELF",
+            "excluded-item":
+            [
+                {
+                    "excluded-path": "/var/log/tiki_falco.log",
+                    "type": "file",
+                    "excluded-mask": "IN_MODIFY"
+                }
+            ]
+        },
+        {
+            "path": "/dev/log",
+            "type": "dir",
+            "mask": "IN_MODIFY | IN_ATTRIB | IN_MOVED_FROM | IN_MOVED_TO | IN_CREATE | IN_DELETE | IN_DELETE_SELF | IN_MOVE_SELF"
+        }
+    ]
+}
