@@ -23,7 +23,7 @@
 #pragma GCC diagnostic ignored "-Wdeprecated"
 #pragma GCC diagnostic pop
 
-#include <nlohmann/json.hpp>
+#include "nlohmann/json.hpp"
 #include "inotify-cxx.h"
 
 using namespace std;
