@@ -190,7 +190,7 @@ void fim::get_metadata_dir(string dir_name, struct metadata_info_struct *f_metad
     f_metadata_info->md5 = "-1";
 }
 
-const void fim::make_metadata_log(string monitor_path)
+static void fim::make_metadata_log(string monitor_path)
 {
     struct metadata_info_struct f_metadata_info;
 
