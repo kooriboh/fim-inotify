@@ -618,7 +618,7 @@ void fim::run_fim()
         auto lambda = [&](string a, string b, bool c){
             file_integrity_monitoring(a, b, c);
         };
-        f_monitor[thread_count] = lambda(monitor_path, monitor_mask, excluded_list_exist);
+        f_monitor[thread_count] = thread(lambda, monitor_path, monitor_mask, excluded_list_exist);
         // f_monitor[thread_count] = thread(file_integrity_monitoring, monitor_path, monitor_mask, excluded_list_exist);
         thread_count++;
     }
