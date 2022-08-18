@@ -615,7 +615,7 @@ void fim::run_fim()
 
         make_metadata_log(monitor_path);
         
-        thread lambda = [](string a, string b, bool c){
+        thread lambda = [&](string a, string b, bool c){
             file_integrity_monitoring(a, b, c);
         };
         f_monitor[thread_count] = lambda(monitor_path, monitor_mask, excluded_list_exist);
