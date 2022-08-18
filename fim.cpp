@@ -190,7 +190,7 @@ void fim::get_metadata_dir(string dir_name, struct metadata_info_struct *f_metad
     f_metadata_info->md5 = "-1";
 }
 
-static void fim::make_metadata_log(string monitor_path)
+void fim::make_metadata_log(string monitor_path)
 {
     struct metadata_info_struct f_metadata_info;
 
@@ -614,7 +614,12 @@ void fim::run_fim()
         }
 
         make_metadata_log(monitor_path);
-        f_monitor[thread_count] = thread(file_integrity_monitoring, monitor_path, monitor_mask, excluded_list_exist);
+        
+        thread lambda = [](string a, string b, bool c){
+            file_integrity_monitoring(a, b, c);
+        };
+        f_monitor[thread_count] = lambda(monitor_path, monitor_mask, excluded_list_exist);
+        // f_monitor[thread_count] = thread(file_integrity_monitoring, monitor_path, monitor_mask, excluded_list_exist);
         thread_count++;
     }
 
