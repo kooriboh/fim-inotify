@@ -69,7 +69,7 @@ private:
     void get_metadata_file(string file_path, struct metadata_info_struct *f_metadata_info);
     void get_metadata_dir(string dir_name, struct metadata_info_struct *f_metadata_info);
     void make_metadata_log(string monitor_path);
-    void file_integrity_monitoring(string monitor_path, string monitor_mask, bool excluded_list_exist);
+    const void file_integrity_monitoring(string monitor_path, string monitor_mask, bool excluded_list_exist);
 
 public:
     void run_fim();
